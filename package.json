@@ -1,0 +1,43 @@
+{
+  "name": "@yourbuddyconner/weth-typechain",
+  "devDependencies": {
+    "@nomiclabs/hardhat-etherscan": "^2.1.2",
+    "@typechain/ethers-v5": "7.2.0",
+    "@typechain/hardhat": "^4.0.0",
+    "eslint": "^7.20.0",
+    "ethers": "^5.5.4",
+    "hardhat": "^2.8.3",
+    "hardhat-deploy": "^0.10.5",
+    "hardhat-gas-reporter": "^1.0.4",
+    "prettier": "^2.2.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.5",
+    "solhint": "^3.3.2",
+    "solhint-plugin-prettier": "^0.0.5",
+    "ts-node": "^10.1.0",
+    "typechain": "^5.0.0",
+    "typescript": "^4.5.5"
+  },
+  "version": "1.4.0",
+  "description": "WETH Typechain Bindings",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "bootstrap": "yarn clean && yarn build",
+    "clean": "hardhat clean && rm -rf lib && rm -rf src",
+    "prepublish": "yarn bootstrap && yarn build",
+    "build": "yarn compile && hardhat prepare-package && tsc --build && yarn copy-definitions",
+    "prettier": "prettier --write './contracts'",
+    "compile": "hardhat compile",
+    "lint": "solhint contracts/*.sol",
+    "lint:fix": "solhint --fix contracts/*.sol"
+  },
+  "author": "Conner Swann",
+  "license": "MIT OR Apache-2.0",
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.4.2",
+    "@openzeppelin/contracts-upgradeable": "~3.4.2",
+    "dotfiles": "^0.8.0",
+    "hardhat-deploy-ethers": "^0.3.0-beta.13",
+    "hardhat-packager": "^1.2.1"
+  }
+}
