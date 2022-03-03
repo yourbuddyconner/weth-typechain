@@ -37,6 +37,10 @@ module.exports = {
     evmostestnet: {
       url: "https://evmos-archive-testnet.api.bdnodes.net:8545",
       deploy: ["deploy/evmos"]
+    },
+    evmos: {
+      url: "<RPC>",
+      deploy: ["deploy/evmos"]
     }
   },
 
