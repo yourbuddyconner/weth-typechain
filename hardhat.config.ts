@@ -35,7 +35,7 @@ module.exports = {
       url: "http://127.0.0.1:8545",
     },
     evmostestnet: {
-      url: "https://evmos-archive-testnet.api.bdnodes.net:8545",
+      url: "https://eth.bd.evmos.dev:8545",
       deploy: ["deploy/evmos"]
     },
     evmos: {
