@@ -39,7 +39,7 @@ module.exports = {
       deploy: ["deploy/evmos"]
     },
     evmos: {
-      url: "<RPC>",
+      url: "https://eth.bd.evmos.org:8545",
       deploy: ["deploy/evmos"]
     }
   },
